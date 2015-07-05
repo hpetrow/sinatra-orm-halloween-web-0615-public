@@ -1,3 +1,15 @@
 <h1>New Kid</h1>
 
 <!-- put form for making a new kid here -->
+<form action="/kids" method="POST">
+  <label>Name</label>
+  <input type = "text" name = "kid[name]">
+  <br>
+  <label>Age</label>
+  <input type = "number" name = "kid[age]">
+  <br>
+  <label>Feeling</label>
+  <input type = "text" name = "kid[feeling]">
+  <br>
+  <input type = "submit" name = "Submit">
+</form>

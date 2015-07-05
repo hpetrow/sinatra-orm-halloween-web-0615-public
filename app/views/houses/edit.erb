@@ -1,3 +1,17 @@
 <h1>Edit House</h1>
 
 <!-- form goes here -->
+<form action="/houses/<%=@house.id%>" method="POST">
+  <input type="hidden" name="_method" value="patch">
+  <label>Address: </label>
+  <input type="text" value="<%=@house.address%>" name="house[address]"><br>
+  <% @candies.each do |candy| %>
+    <input
+      type"checkbox"
+      value="<%=candy.id%>"
+      name="house[candies][]"
+      <%=checked if @house.candies.include?(candy)%>
+    >
+  <% end %>
+  <input type="submit" name="Submit">
+</form>
